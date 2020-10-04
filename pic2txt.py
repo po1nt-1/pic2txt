@@ -66,7 +66,10 @@ def main():
                 break
 
     except KeyboardInterrupt:
-        os.remove(file_name)
+        try:
+            os.remove(file_name)
+        except FileNotFoundError:
+            pass
         print()
         return
 
