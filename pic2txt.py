@@ -34,9 +34,8 @@ def main():
                 key = input("Continue?(y): ")
                 if key == "y":
                     continue
-                else:
-                    os.remove(file_name)
-                    break
+                os.remove(file_name)
+                break
             try:
                 p = requests.get(url_img)
                 out = open(file_name, "wb")
@@ -61,9 +60,8 @@ def main():
             key = input("Continue?(y): ")
             if key == "y":
                 continue
-            else:
-                os.remove(file_name)
-                break
+            os.remove(file_name)
+            break
 
     except KeyboardInterrupt:
         try:
